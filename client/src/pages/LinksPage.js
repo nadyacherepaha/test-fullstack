@@ -1,7 +1,8 @@
 import React, {useState, useContext, useCallback, useEffect} from 'react'
 import {useHttp} from "../hooks/http.hook"
 import {AuthContext} from "../context/AuthContext"
-import {Loader} from "../components/Loader";
+import {Loader} from "../components/Loader"
+import {LinksList} from "../components/LinksList"
 
 export const LinksPage = () => {
     const [links, setLinks] = useState([])
@@ -27,7 +28,7 @@ export const LinksPage = () => {
 
     return (
         <>
-            {/*{!loading && <LinksList links={links} />}*/}
+            {!loading && <LinksList links={links} />}
         </>
     )
 }
